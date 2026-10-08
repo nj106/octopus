@@ -1,6 +1,6 @@
 # Octopus deployment for Portainer (nj106 fork).
 # - bridge network mode (no dedicated project network)
-# - host port 8080 -> container 8080 (project default)
+# - host port 8085 -> container 8080
 # Named volume instead of the upstream '/path/to/data' placeholder.
 # No required env vars; default login admin/admin (change after first login).
 services:
@@ -10,7 +10,7 @@ services:
     network_mode: bridge
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "8085:8080"
     volumes:
       - octopus-data:/app/data
 
