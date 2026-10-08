@@ -13,6 +13,8 @@ services:
       - "8085:8080"
     volumes:
       - octopus-data:/app/data
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
 
 volumes:
   octopus-data:
