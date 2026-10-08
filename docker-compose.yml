@@ -16,4 +16,5 @@ services:
 
 volumes:
   octopus-data:
+    name: octopus_data
     driver: local
